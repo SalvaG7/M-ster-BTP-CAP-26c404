@@ -1,0 +1,17 @@
+ID,subCategory,category_ID
+7ea8bbfa-3b32-4a0c-8f63-1e7d83334801,Smartphones,b1a26d04-6c1a-4e93-933a-f65f90e2c03c
+6c79d7e5-478e-4199-a3aa-5d51a1f4f944,Laptops,b1a26d04-6c1a-4e93-933a-f65f90e2c03c
+3f07f8ff-4637-4ac4-82a2-dfcbdfb7f2c1,Tablets,b1a26d04-6c1a-4e93-933a-f65f90e2c03c
+94b0df62-28fb-4a0f-94dc-28ce68b303d6,Televisions,b1a26d04-6c1a-4e93-933a-f65f90e2c03c
+e56e7e1d-029f-4b75-8f77-6319aa50fdc5,Sofas,29f5e94e-5c72-4ec2-94f1-35d9a09a34cb
+e838e1b7-02ee-44aa-867e-237f13e59376,Chairs,29f5e94e-5c72-4ec2-94f1-35d9a09a34cb
+a7bb78e3-ff82-4e9b-a9f3-d98ad1837728,Tables,29f5e94e-5c72-4ec2-94f1-35d9a09a34cb
+fe9b3c64-1554-4df2-b6f9-f44b6796cf72,Beds,29f5e94e-5c72-4ec2-94f1-35d9a09a34cb
+a1cc29e6-8194-4fa7-88eb-2f9fc13f9d8b,Fiction,d59ad002-8c3e-4dfb-8f67-82c0c3c270f1
+4a007e57-c54d-4396-88c4-dca6d99a0fbe,Non-fiction,d59ad002-8c3e-4dfb-8f67-82c0c3c270f1
+2a08e8ab-d4e4-40e6-a71f-0056fc8444a1,Comics,d59ad002-8c3e-4dfb-8f67-82c0c3c270f1
+beb30545-0e13-4b44-b4ee-e0dd1441db7e,Children's,d59ad002-8c3e-4dfb-8f67-82c0c3c270f1
+08cf981b-66f0-41ec-9336-8801844b79fc,Men's Wear,4ac7461a-4789-4c4c-b6cf-e2cf858c79c7
+bfdce0a6-c1ed-4a08-bb13-f47ecdfd269a,Women's Wear,4ac7461a-4789-4c4c-b6cf-e2cf858c79c7
+38d8a6a6-dce2-46cf-a7a5-7fa4d56adba0,Children's Wear,4ac7461a-4789-4c4c-b6cf-e2cf858c79c7
+eb350394-f5d2-4aa2-9dff-304d4cfbd30d,Shoes,4ac7461a-4789-4c4c-b6cf-e2cf858c79c7

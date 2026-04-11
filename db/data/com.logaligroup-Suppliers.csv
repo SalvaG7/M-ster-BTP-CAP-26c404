@@ -1,0 +1,11 @@
+ID,supplier,supplierName,webAddress,contact_ID
+b7fa16c8-8d26-4b9b-9e8d-0d3d23ef5d4a,000000001,Apple Inc.,https://www.apple.com/,50d0dc30-31f2-4df4-93e1-93f98d49ad02
+ac978be1-18f3-4787-90d4-f181b7e99d2b,000000002,LG Electronics,https://www.lg.com/,2e8b5b0e-6f6a-4b6a-8e3f-2c6857b5d38f
+9be8a9ed-1c37-4c1f-b535-31c9e7d9c03d,000000003,Amazon,https://www.amazon.com/,ecb4e496-f144-4393-84cf-324de1d1d2a3
+ef364eb2-2bb5-48e1-826c-25d691cf837d,000000004,IKEA,https://www.ikea.com/,7a3db6f7-09f7-455d-b53c-8fd9f1e1d35e
+2dc3b5ec-8b9d-4d98-8129-02133fda2c22,000000005,Nike,https://www.nike.com/,89144db7-7cc3-4025-a02b-15d8a553d18f
+0347a3f3-0e58-4c15-ae51-c53d4fca49de,000000006,Zara,https://www.zara.com/,dce41787-2a47-49f0-bd1c-cf1fd010b69a
+6f949949-2d52-4077-9cb6-839e2ff0b3b8,000000007,HP,https://www.hp.com/,c4f77ee0-7c9c-4eec-92d9-26e2c91c5d07
+38d22d64-b546-4f91-9ca7-cbfad2d94dbe,000000008,HarperCollins,https://www.harpercollins.com/,bd210dea-94d2-4463-b9c7-91e7b46a9a94
+e6c4504e-9b4a-47eb-98ed-d8b6d12aa5e6,000000009,Random House,https://www.penguinrandomhouse.com/,d68138c1-4b60-420c-bd07-fb14a6812b82
+7257e73e-54f8-4c98-8f1d-f0a9edc22a24,000000010,Sony,https://www.sony.com/,87e7ab1e-1d27-4372-a1ed-c7354cbd00a7
