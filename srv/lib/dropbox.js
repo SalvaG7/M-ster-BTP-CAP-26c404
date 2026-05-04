@@ -10,7 +10,6 @@ function client() {
         clientId: process.env.DROPBOX_APP_KEY,
         clientSecret: process.env.DROPBOX_APP_SECRET,
         refreshToken: process.env.DROPBOX_REFRESH_TOKEN,
-        // fetch nativo de Node 22 - no hace falta inyectarlo
     });
     return _dbx;
 }
@@ -31,7 +30,7 @@ async function uploadImage(ID, buffer, ext = 'png') {
 
 async function downloadImage(path) {
     const { result } = await client().filesDownload({ path });
-    return result.fileBinary; // Buffer en Node
+    return result.fileBinary;
 }
 
 async function deleteImage(path) {
