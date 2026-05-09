@@ -7,27 +7,30 @@ using {
     sap.common.Currencies
 } from '@sap/cds/common';
 
+using {API_BUSINESS_PARTNER as bp} from '../srv/external/API_BUSINESS_PARTNER';
+
 entity Products : cuid, managed {
-    image : LargeBinary @Core.MediaType: imageType @Core.ContentDisposition.Filename: fileName;
-    imageType : String @Core.IsMediaType;
-    fileName: String;
-    product      : String(10);
-    productName  : String(40);
-    description  : LargeString;
-    category     : Association to Categories; //category_ID       --> ValueHelp
-    subCategory  : Association to SubCategories; //subCategory_ID    --> ValueHelp
-    statu        : Association to Status; //statu_code        --> InStock, OutOfStock o LowAvailability
-    price        : Decimal(6, 2); //0001.23
-    rating       : Decimal(3, 2); //1.05
-    currency     : Association to Currencies default 'USD';       //currency_code
-    detail       : Composition of ProductDetails; //(detail_ID) --> 9ea4f4c3-6fac-4a79-a278-7f4516ab5a37
-    supplier     : Association to Suppliers;    // supplier_ID
-    toReviews    : Composition of many Reviews
-                       on toReviews.product = $self;
+    image         : LargeBinary  @Core.MediaType: imageType  @Core.ContentDisposition.Filename: fileName;
+    imageType     : String       @Core.IsMediaType;
+    fileName      : String;
+    product       : String(10);
+    productName   : String(40);
+    description   : LargeString;
+    category      : Association to Categories; //category_ID       --> ValueHelp
+    subCategory   : Association to SubCategories; //subCategory_ID    --> ValueHelp
+    statu         : Association to Status; //statu_code        --> InStock, OutOfStock o LowAvailability
+    price         : Decimal(6, 2); //0001.23
+    rating        : Decimal(3, 2); //1.05
+    currency      : Association to Currencies default 'USD'; //currency_code
+    detail        : Composition of ProductDetails; //(detail_ID) --> 9ea4f4c3-6fac-4a79-a278-7f4516ab5a37
+    supplier      : Association to Suppliers; // supplier_ID
+    supplierv2    : Association to bp.A_Supplier; // supplierv2_Supplier
+    toReviews     : Composition of many Reviews
+                        on toReviews.product = $self;
     toInventories : Composition of many Inventories
-                       on toInventories.product = $self;
-    toSales      : Association to many Sales
-                       on toSales.product = $self;
+                        on toInventories.product = $self;
+    toSales       : Association to many Sales
+                        on toSales.product = $self;
 };
 
 type myDecimal : Decimal(8, 3);
@@ -103,10 +106,18 @@ entity Departments : cuid {
 };
 
 entity Status : CodeList {
-    key code : String(20) enum {
+    key code        : String(20) enum {
             InStock = 'In Stock';
             OutOfStock = 'Out of Stock';
             LowAvailability = 'Low Availability';
         };
-    criricality: Int16;
+        criricality : Int16;
 };
+
+
+entity Options : CodeList {
+    key code : String(10) enum {
+            A = 'Add';
+            B = 'Discount';
+        };
+}

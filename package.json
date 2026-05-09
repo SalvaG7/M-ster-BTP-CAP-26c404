@@ -3,17 +3,43 @@
   "version": "1.0.0",
   "description": "Products - Logali Group",
   "dependencies": {
-    "@sap/cds": "^9.8.5",
+    "@cap-js/hana": "^2",
+    "@sap-cloud-sdk/connectivity": "^4",
+    "@sap-cloud-sdk/http-client": "^4",
+    "@sap-cloud-sdk/resilience": "^4",
+    "@sap/cds": "^9.9.1",
+    "@sap/xssec": "^4",
     "dotenv": "^17.4.2",
     "dropbox": "^10.34.0",
     "express": "^4.22.1"
   },
   "devDependencies": {
-    "@cap-js/sqlite": "^2.2.0"
+    "@cap-js/sqlite": "^2.2.0",
+    "@sap/cds-dk": "^9"
   },
   "scripts": {
     "start": "cds-serve"
   },
   "private": true,
-  "cds": {}
+  "cds": {
+    "requires": {
+      "API_BUSINESS_PARTNER": {
+        "kind": "odata-v2",
+        "model": "srv/external/API_BUSINESS_PARTNER",
+        "credentials": {
+          "url": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER"
+        }
+      },
+      "API_BUSINESS_PARTNER_OP": {
+        "kind": "odata-v2",
+        "model": "srv/external/API_BUSINESS_PARTNER_OP",
+        "credentials": {
+          "url": "http://s4h22.sap4practice.com:8007/sap/opu/odata/sap/API_BUSINESS_PARTNER"
+        }
+      },
+      "[production]": {
+        "auth": "xsuaa"
+      }
+    }
+  }
 }

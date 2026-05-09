@@ -52,6 +52,12 @@ annotate myservice.Inventories with @(
             $Type : 'UI.DataField',
             Value : quantity,
         },
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'Products.setStock',
+            Label: 'Set Stock',
+            Inline : true
+        },
     ],
     UI.FieldGroup #InventoryInformation : {
         $Type : 'UI.FieldGroupType',

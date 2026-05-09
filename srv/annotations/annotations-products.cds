@@ -15,6 +15,7 @@ annotate myservice.Products with {
     category    @title: 'Category';
     subCategory @title: 'Sub-Category';
     supplier    @title: 'Supplier';
+    supplierv2 @title: 'Supplier V2';
     statu       @title: 'Status';
     rating      @title: 'Rating';
     price       @title: 'Price'     @Measures.ISOCurrency: currency_code;
@@ -73,6 +74,25 @@ annotate myservice.Products with {
             }, ],
         },
     };
+    supplierv2 @Common: {
+        Text : supplierv2.SupplierName,
+        TextArrangement : #TextOnly,
+        ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'SuppliersV2',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : supplierv2_Supplier,
+                    ValueListProperty : 'Supplier'
+                },
+                {
+                    $Type : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty : 'SupplierFullName'
+                },
+            ]
+        }
+    }
 };
 
 
@@ -195,6 +215,10 @@ annotate myservice.Products with @(
             {
                 $Type: 'UI.DataField',
                 Value: supplier_ID
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : supplierv2_Supplier
             }
         ]
     },
